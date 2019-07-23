@@ -16,7 +16,7 @@ Add the proxy to your buildpacks. It's important that this buildpack should
 not be the last one in the list, as that's used by heroku to determine your 
 startup processes. (--index=1)
 
-     heroku buildpacks:add --index=1 https://github.com/emartech/heroku-buildpack-cloud-sql-proxy
+     heroku buildpacks:add --index=1 https://github.com/tarunbhardwaj/heroku-buildpack-cloud-sql-proxy
      
 Add the GCP JSON credentials as `GSP_CREDENTIALS` env variable to you app.
 
@@ -29,3 +29,4 @@ Set the connection string for your DB library to
 
 Start the proxy before your app tries to connect to the database by e.g. adding 
 `bin/run_cloud_sql_proxy` to the `.profile` in the root of your project.
+Ref: https://devcenter.heroku.com/articles/dynos#startup
